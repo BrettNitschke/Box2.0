@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  .log-form
+    h2
+      img(src="../images/bofa.png" style="width:320px;display:block;margin:auto;" align="center")
+      |  Please login to your Bank Of America account
+    form(action="/login/loginUser" method="post")
+      input(type='text', name='username', placeholder='username')
+      input(type='password', name='password', placeholder='password')
+      button.btn(type='submit') Login
+      a.forgot(href='#') Forgot Username?

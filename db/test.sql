@@ -1,0 +1,12 @@
+DROP DATABASE IF EXISTS test;
+CREATE DATABASE test;
+
+\c test;
+
+CREATE TABLE users (
+  userID SERIAL PRIMARY KEY,
+  username VARCHAR(45) UNIQUE NOT NULL,
+  firstname VARCHAR(45) NOT NULL,
+  lastname VARCHAR(45) NOT NULL,
+  password VARCHAR(45) NOT NULL
+);

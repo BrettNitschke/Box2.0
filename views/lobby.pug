@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  input(type="hidden", id="fname", value=folderid)
+  input(type="hidden", id="accessToken", value=token)
+  img(src="../images/bofabanner.jpg" style="width:1000px;height200px;display:block;margin:auto;" align="center")
+  div(class="container" style="width:1030px" align="center")
+    h1=message
+    form#uploadForm(ref='uploadForm', action='lobby/upload', method='post', enctype='multipart/form-data')
+      input(type='file', name='file')
+      input(type='submit', value='Upload!')
+  style.
+    body{
+        background: url(https://i.ytimg.com/vi/J3pF2jkQ4vc/maxresdefault.jpg);
+    }
+    .buik-logo svg {
+      display: none;
+    }
