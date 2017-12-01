@@ -98,21 +98,6 @@ router.use(getFileName);
 
 
 
-//Get clientID, clientSecret and token from .env file, initiate SDK and create client folder
-/*function createTheFolder(req, res, next){
-
-  var fName = res.locals.foldername;
-  console.log("checkpoint: ", fName);
-  res.locals.client.folders.create('0', fName)
-      .then(function(data){
-      res.locals.folderid = data.id;
-      console.log("folder id = ", data.id);
-      next();
-    });
-}
-
-router.use(createTheFolder);
-*/
 router.use(fileUpload());
 
 router.get('/', function(req, res, next) {
