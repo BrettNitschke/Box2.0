@@ -115,20 +115,14 @@ router.post('/upload', function(req, res, next) {
   //I want to rename the file but preserve the original file extension
   var fileName = res.locals.filename + path.extname(req.files.file.name);
   console.log(fileName);
-	res.locals.client.files.uploadFile('0', fileName, req.files.file.data, function(err, data) {
+  res.locals.client.files.uploadFile('0', fileName, req.files.file.data, function(err, data) {
     if (err){
       console.log(err);
     }
-
-    console.log("upload file function");
-
     res.render('lobby', {
       message:'Thank you for uploading'
     });
-    //next();
 	});
-
-    //res.redirect('/lobby');
 });
 
 
