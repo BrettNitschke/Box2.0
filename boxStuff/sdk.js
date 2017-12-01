@@ -12,9 +12,5 @@ var sdk = new BoxSDK({
 			passphrase: config.get('boxAppSettings.appAuth.passphrase')
 	}
 });
-//var jsonFromDeveloperConsole = require('../stuff.json');
-//var sdk = BoxSDK.getPreconfiguredInstance(jsonFromDeveloperConsole);
-//var client = sdk.getAppAuthClient('enterprise', process.env.enterpriseID);
 
-//console.log(jsonFromDeveloperConsole);
 module.exports = sdk;
